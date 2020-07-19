@@ -1,6 +1,5 @@
 $(document).ready(function () {
-    'use strict';
-
+    
 	//********** menu background color change while scroll
 
 	$(window).on('scroll', function () {
@@ -12,32 +11,11 @@ $(document).ready(function () {
 		}
 	});
 
-
-	//********** menu hides after click (mobile menu)
-
-	$(document).on('click', '.navbar-collapse.in', function (e) {
-		if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
-			$(this).collapse('hide');
-		}
-	});
-
-
 	//*********** scrollspy js
 
 	$('body').scrollspy({
 		target: '.navbar-collapse',
 		offset: 195
-	});
-
-
-	//************ smooth scroll js
-
-	$('a.smooth-menu,a.dadada,a.skill-btn').on("click", function (e) {
-		e.preventDefault();
-		var anchor = $(this);
-		$('html, body').stop().animate({
-			scrollTop: $(anchor.attr('href')).offset().top - 50
-		}, 1000);
 	});
 
 	//*********** Animated headline js
@@ -46,35 +24,6 @@ $(document).ready(function () {
 		animationType: 'clip'
 	});
 
-	//***** Skill bar js
-
-	var skillbar = $(".skillbar");
-
-	skillbar.waypoint(function () {
-		skillbar.each(function () {
-			$(this).find(".skillbar-child").animate({
-				width: $(this).data("percent")
-			}, 1000);
-		});
-	}, {
-		offset: "80%"
-	});
-
-	
-    
-    
-    //************ Magnific Popup
-    
-
-    $('.zoom,.zoom1').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true
-        }
-    });
-	
-	
-    
     //*************** Isotope filter
 
     var $Container = $('#img-filter');
@@ -99,23 +48,4 @@ $(document).ready(function () {
             },1000);
         }).trigger('resize');
     }
-
-
-
-    //*************counter-up js
-
-    $('.counter').counterUp({
-        delay: 50,
-        time: 8000
-    });
-
-
-
-
-
-	
-	
-	
-
-
 });
