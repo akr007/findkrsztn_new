@@ -90,96 +90,8 @@ img {
 
 /*--- Default css ends---*/
 
-/*-------------- 2. Preloader css starts ---------------*/
 
-.loader_bg {
-    position: fixed;
-    z-index: 9999999;
-    background: #fff;
-    width: 100%;
-    height: 100%;
-}
-
-.loader {
-    border: 0 solid transparent;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    top: calc(50vh - 75px);
-    left: calc(50vw - 75px);
-}
-
-.loader:before, .loader:after {
-    content: '';
-    border: 1em solid #00B0DC;
-    border-radius: 50%;
-    width: inherit;
-    height: inherit;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: loader 2s linear infinite;
-    opacity: 0;
-}
-
-.loader:before {
-    animation-delay: .5s;
-}
-
-@keyframes loader {
-    0% {
-        transform: scale(0);
-        opacity: 0; }
-    50% {
-        opacity: 1; }
-    100% {
-        transform: scale(1);
-        opacity: 0; }
-}
-
-
-/*---------- preloader css ends -------------*/
-
-/*--- 3. Mouse animation starts---*/
-
-@-webkit-keyframes scroll-ani {
-    0% {
-        opacity: 1;
-        top: 29%;
-    }
-    15% {
-        opacity: 1;
-        top: 50%;
-    }
-    50% {
-        opacity: 0;
-        top: 50%;
-    }
-    100% {
-        opacity: 0;
-        top: 29%;
-    }
-}
-
-@keyframes scroll-ani {
-    0% {
-        opacity: 1;
-        top: 29%;
-    }
-    15% {
-        opacity: 1;
-        top: 50%;
-    }
-    50% {
-        opacity: 0;
-        top: 50%;
-    }
-    100% {
-        opacity: 0;
-        top: 29%;
-    }
-}
+/*---  Mouse animation starts---*/
 
 .mouse-scroll {
     position: absolute;
@@ -201,7 +113,6 @@ img {
     width: 35px;
     height: 60px;
     margin: 0 auto 20px;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 3px solid #ffffff;
     border-radius: 23px;
@@ -217,13 +128,11 @@ img {
     margin: -4px 0 0 -4px;
     background: #ffffff;
     border-radius: 50%;
-    -webkit-animation: scroll-ani 2s linear infinite;
-    animation: scroll-ani 2s linear infinite;
 }
 
 /*---mouse animation ends---*/
 
-/*---------- 4. Nav area css starts -------------*/
+/*---------- Nav area css starts -------------*/
 
 .nav-area{
     height: 65px;
@@ -239,10 +148,6 @@ img {
 }
 
 .sticky_navigation{
-    -webkit-transition: all 0.4s ease-out;
-    -o-transition: all 0.4s ease-out ;
-    transition: all 0.4s ease-out ;
-    -webkit-box-shadow: 0px 3px 4.6px 0.3px rgba(0,0,0,0.25);
     box-shadow: 0px 3px 4.6px 0.3px rgba(0,0,0,0.25);
 }
 
@@ -345,7 +250,7 @@ img {
 
 /*---------- Nav area css ends -------------*/
 
-/*----------- 5. Banner area css starts--------------*/
+/*----------- Banner area css starts--------------*/
 
 
 .banner-area{
@@ -410,8 +315,6 @@ canvas{
     font-weight: 800;
     margin-bottom: 10px;
 }
-
-
 
 .intro h1 {
     color: #fafafa;
@@ -484,7 +387,7 @@ canvas{
 
 /*---------Banner area css ends--------------*/
 
-/*---------- 6. About area css starts---------------*/
+/*---------- About area css starts---------------*/
 
 .stack {
     position: relative;
@@ -523,37 +426,6 @@ canvas{
     box-shadow: 1px 1px 2px rgba(0,0,0,.25);
 }
 
-.btn-a {
-    animation-delay: 2s;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    line-height: 18px;
-    padding: 14px 22px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    -webkit-animation-delay: 2s;
-    -webkit-transition: background .3s ease-in-out, color .3s ease-in-out;
-    animation-delay: 2s;
-    transition: background .3s ease-in-out, color .3s ease-in-out;
-    white-space: nowrap;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    margin-top: 20px;
-    text-decoration: none;
-    margin-right: 15px;
-}
-
-.skill-btn {
-    background: #00b0dc;
-    border: 1px solid #00b0dc;
-    color: #fff;
-}
-
 .down-btn {
     background: none;
     color: #2B2F37;
@@ -570,8 +442,6 @@ canvas{
     color: #fafafa;
     margin-bottom: 20px;
 }
-
-
 
 .about-right h2 {
     margin-bottom: 30px;
@@ -637,105 +507,8 @@ canvas{
 
 /*-------About area css ends--------------*/
 
-/*-------- 7. Services area starts ----------*/
 
-
-.services-area {
-    background: #f8f8f8;
-}
-.service {
-    text-align: center;
-}
-
-.service-box {
-    padding: 20px;
-    margin-bottom: 40px;
-    position: relative;
-    transition: .9s;
-}
-
-.service-icon i {
-    font-size: 50px;
-    color: #00B0DC;
-    margin-bottom: 20px;
-}
-
-.service-box:hover:after {
-    top: 0;
-    height: 100%;
-    transition: 0.9s;
-}
-
-.service-box:hover .after {
-    bottom: 0;
-    height: 100%;
-    transition: 0.9s;
-}
-
-.service-box:hover:before {
-    left: 0;
-    width: 100%;
-    transition: 0.9s;
-}
-
-.service-box:hover .before {
-    right: 0;
-    width: 100%;
-    transition: 0.9s;
-}
-
-.service-box:hover:before,
-.service-box:hover .before {
-    width: 100%;
-    transition: 0.9s;
-}
-
-.service-box:after {
-    height: 80%;
-    width: 2px;
-    content: '';
-    top: 10%;
-    left: 0px;
-    transition: 0.9s;
-}
-
-.service-box .before,
-.service-box .after,
-.service-box:before,
-.service-box:after {
-    background: #777;
-    position: absolute;
-    transition: 0.9s;
-}
-
-.service-box:before {
-    height: 2px;
-    width: 80%;
-    content: '';
-    top: 0px;
-    left: 10%;
-    transition: 0.9s;
-}
-
-.service-box .before {
-    height: 2px;
-    width: 80%;
-    bottom: 0px;
-    right: 10%;
-    transition: 0.9s;
-}
-
-.service-box .after {
-    height: 80%;
-    width: 2px;
-    bottom: 10%;
-    right: 0px;
-    transition: 0.9s;
-}
-
-/*-------- Services area ends ----------*/
-
-/*--------- 8. Skills area starts --------------*/
+/*--------- Skills area starts --------------*/
 
 .skills-area .section-title h2{
     color: #fff;
@@ -801,7 +574,7 @@ canvas{
 
 /*--------- Skills area ends --------------*/
 
-/*----------- 9. Portfolio area Starts --------*/
+/*----------- Portfolio area Starts --------*/
 
 .portfolio-area {
     background: #fafafa;
@@ -930,57 +703,7 @@ ul.port-nav-list li a.active {
 
 /*-------- Portfolio area css ends---------*/
 
-/*--------- 10. Statistic area starts -----------*/
-
-.statistic-area{
-    background-image: url(../images/statistic/stats.jpg);
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    color:#fff;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-.statistic-area:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    z-index: -1;
-}
-
-.statistic-area .item{
-    margin-bottom: 30px;
-}
-
-.statistic-area .item .fa{
-    color: #fff;
-    font-size: 40px;
-}
-
-.statistic-area .item p{
-    color: #fff;
-    margin-top: 10px;
-    font-size: 20px;
-    font-weight: 300;
-}
-
-.statistic-area .item h2 {
-    color: #00B0DC;
-    font-weight: 800;
-    font-size: 45px;
-    margin-top: 10px;
-}
-
-/*----------------Statistic area ends-------------------*/
-
-/*-------- 11. Experience area starts -------------*/
+/*-------- Experience area starts -------------*/
 
 .experience-area{
     background-image: url(../images/statistic/stats.jpg);
@@ -1046,158 +769,7 @@ ul.port-nav-list li a.active {
     z-index: 1;
 }
 
-/*-------- Experience area ends -------------*/
-
-/*------- 12. Testimonial area css starts --------*/
-
-.testimonial-area .section-title h2 {
-    color: #fff;
-}
-
-.testimonial-area{
-    background-image: url(../images/testimonial/1.jpeg);
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    position: relative;
-    z-index: 1;
-}
-.testimonial-area:before{
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-    z-index: -1;
-}
-.single-testimonial {
-    background: #ffffff;
-    border-radius: 5px;
-    padding: 30px;
-}
-
-.single-testimonial p {
-    margin-bottom: 30px;
-}
-
-.single-testimonial h2 {
-    margin: 10px 0 0;
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
-.testi-comment i {
-    font-size: 30px;
-    color: #00B0DC;
-}
-
-.single-testimonial h3 {
-    margin: 10px 0 0;
-    font-weight: 100;
-    font-size: 15px;
-}
-
-.testi-img {
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.testi-img img {
-    width: 100%;
-    height: 100%;
-}
-
-.owl-theme .owl-controls{
-    margin-top: 50px;
-    margin-left: 30px;
-}
-
-.owl-dots{
-    text-align: center;
-    margin-top: 30px;
-}
-
-.owl-dot {
-    display: inline-block;
-    height: 15px !important;
-    width: 15px !important;
-    background-color: #ffffff !important;
-    opacity: 0.8;
-    border-radius: 50%;
-    margin: 0 5px;
-}
-
-.owl-dot.active {
-    background-color: #00B0DC !important;
-}
-
-
-/*------- testimonial area ends --------*/
-
-/*-------------13. Contact area starts -------------*/
-
-.contact-area{
-    background-color: #ffffff;
-}
-
-.contact-area .form-control{
-    border:2px solid #a2a2a2;
-    box-shadow: none;
-    padding: 6px;
-    border-radius: 0;
-    margin-bottom: 30px;
-}
-
-.right-contact-text {
-    margin-bottom: 25px;
-}
-
-.right-contact-text i {
-    color: #00B0DC;
-    font-size: 25px;
-    margin-bottom: 10px;
-}
-
-.contact-area textarea.form-control{
-    border:2px solid #a2a2a2;
-    padding: 6px;
-    height: 250px;
-    margin-bottom: 30px;
-}
-
-.btn.btn-send {
-    background: #00B0DC;
-    color: #ffffff;
-    border-radius: 0;
-    padding: 15px 20px;
-    text-transform: uppercase;
-    font-weight: 600;
-    border-radius: 5px;
-}
-
-.right-contact-text h2{
-    margin-top: 2px;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: 3px;
-}
-
-.right-contact-text p{
-    line-height: 21px;
-    letter-spacing: 2px;
-    font-size: 11px;
-    color: #777;
-}
-/*------------- Contact area ends -------------*/
-
-/*--------------16. Footer area starts -------------*/
+/*--------------Footer area starts -------------*/
 
 .footer-area {
     background: #171717;
